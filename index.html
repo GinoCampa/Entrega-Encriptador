@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./imagenes/logo.svg">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Encriptador de Texto by Gino Campanini</title>
+</head>
+<body>
+    <!--Header de la pagina, icono de Alura-->
+    <header>
+        <img class = "logo" src="./imagenes/Logo.png" alt="Logo de Alura">
+    </header>
+    <!--Cuerpo principal: Campo de texto ingreso y botonera Encriptar/Desencriptar en Seccion 1. Texto de salida e imagenes correspondientes + boton copiar en Seccion2 -->
+    <main>
+        <section class = "seccion1">
+            <textarea class="textoIngreso" cols="30"  rows="10" placeholder="Ingrese el texto aqui"></textarea>
+            <div class="avisoIngreso">
+                <img class = "avisoLogo" src="./imagenes/aviso.svg" alt="Imagen de aviso">
+                <p class="avisoEncriptador">
+                    Solo letras minusculas y sin acentos
+                </p>
+            </div>
+
+            <div class="botonera">
+                <button class="botonEncriptar" onclick="botonEncriptar()">
+                    Encriptar
+                </button>
+                <button class="botonDesencriptar" onclick="botonDesencriptar()">
+                    Desencriptar
+                </button>
+            </div>
+        </section>
+
+        <section class="seccion2">
+            <div class="textoSalida">
+                <textarea class="mensajeResultado" cols="20" rows="10" readonly></textarea>
+                <img class="imagenMuñeco" src="./imagenes/muñeco.svg" alt="Imagen de Muñeco">
+                <h2 class="faltaMensaje">
+                    Ningun Mensaje fue encontrado
+                </h2>
+                <p class="ingresarTexto">
+                    Ingresa el texto que desees encriptar o desencriptar
+                </p>
+                
+            </div>
+            <div>
+                <button class="botonCopiar" onclick="botonCopiar()" style="visibility: hidden">
+                Copiar
+                </button>
+            </div>
+        </section>
+    </main>   
+
+
+    <script src="encriptador.js"></script>
+</body>
+</html>
